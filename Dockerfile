@@ -27,5 +27,6 @@ RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 RUN cp .env.example .env || true \
     && php artisan key:generate || true
 
-EXPOSE 9000
+EXPOSE 6060
+
 CMD ["php-fpm"]
